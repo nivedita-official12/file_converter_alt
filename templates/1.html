@@ -1,0 +1,64 @@
+<style type="text/css">
+li::before{
+	content: "•"; 
+	color: red;
+  	display: inline-block; 
+  	width: 1em;
+  	margin-left: -1em
+}
+button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #008CBA;
+}
+body{
+	color: white;	
+}
+
+</style>
+
+<br>
+<header><center style="background-color:#008CBA;">
+<h1>Welcome to File Converter Application</h1></center></header>
+
+<body style = "background-color: grey;">
+<br><br>
+<p><h4>Description :  This application will allow you to convert specific file is some other format based on your requirements . To do the job you need to follow some steps .<br>
+Please go though the instructions. </h4></p><br><br>
+
+<li>Choose the type of converter you want to use</li>
+<li>Hit on the Choose File button . </li>
+<li>It will aloow you to browse over your documents resides in local computer.</li>
+<li>Select one at a time.</li>
+<li>Click on Convert button.</li>
+<li>One convertion parameter will show you how much is doen .</li>
+<li>Once completed on Pop Up will appear with the message of completion.</li>
+<li>One Download Option will appear. </li>
+<li>On clicking the download button the converted file will be saved to your system.</li>
+
+<form method="post" >
+<label ><h4><u> STEP I --> </u> Please Select the Converter You Want to Use : </label>
+    <select type="Select" name="myselect">
+    <option value="sel">Please Select</option>
+    <option value="etop">Excel to PDF</option>
+    <option value="ptoe">PDF to Execl</option>
+   </select>
+    <!--<input type="submit">-->
+</form>
+
+<label><h4><u> STEP II --> </u>Select a file : </label>
+<input type="file" id="myfile" name="myfile">
+<!--<input type=submit value=Upload></h4>-->
+<br>
+<button type="submit">Convert</button>
+</form>
+</body>
+
+

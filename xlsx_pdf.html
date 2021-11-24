@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+</head>
+
+<style>
+@page {
+        size: A4 !important;
+        margin: 1mm 1mm 1mm 1mm !important;
+    }
+
+body {
+        margin: 0px;
+        padding: 0px;
+        font-size: 8px;
+        font-weight: bold;
+        border: 1px;
+        font-family: Sans-Serif;
+    }
+tr,td{
+	word-break :break-all;
+	overflow-wrap: break-word;
+}
+table{
+	table-layout: fixed;
+	width : 100%;
+	border : 1px solid black;
+}
+td:nth-child(1){
+	width:10%;
+}
+td:nth-child(2){
+	width:80%;
+}
+tr:nth-child(even){
+	background-color:#dddddd;
+}
+</style>
+
+
+{%- for i in range(len) %}
+<body>
+     <table>
+     	<tr>
+     		<td >{{ header_list[0][0] }}</td>
+     		<td >{{p_code[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][1] }}</td>
+     		<td >{{p_title[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][2] }}</td>
+     		<td>{{teas_t[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][3] }}</td>
+     		<td>{{p_lng_desc[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][4] }}</td>
+     		<td>{{p_features[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][5] }}</td>
+     		<td>{{meta_d[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][6] }}</td>
+     		<td>{{e_desc_240[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][7] }}</td>
+     		<td>{{kw[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][8] }}</td>
+     		<td>{{inter_ky_wrd[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][9] }}</td>
+     		<td>{{unc[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][10] }}</td>
+     		<td>{{cont_author[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][11] }}</td>
+     		<td>{{incd[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][12] }}</td>
+     		<td>{{warant[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][13] }}</td>
+     		<td>{{bran[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][14] }}</td>
+     		<td>{{foot_nt[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][15] }}</td>
+     		<td>{{compl[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][16] }}</td>
+     		<td>{{certi[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][17] }}</td>
+     		<td>{{dsclm[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][18] }}</td>
+     		<td>{{alrt[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][19] }}</td>
+     		<td>{{eu_supp[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][20] }}</td>
+     		<td>{{tf_lng[i]}}</td>
+     	</tr>
+     	<tr style="border: 1px solid black;border-collapse: collapse;">
+     		<td>{{ header_list[0][21] }}</td>
+     		<td>{{tech_det[i]}}</td>
+     	</tr>
+     </table>
+     <p style="page-break-before: always" ></p>
+{% endfor %}
+</body>
+</html>
+

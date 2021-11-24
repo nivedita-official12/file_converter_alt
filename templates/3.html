@@ -1,0 +1,86 @@
+<style type="text/css">
+li::before{
+	content: "•"; 
+	color: red;
+  	display: inline-block; 
+  	width: 1em;
+  	margin-left: -1em
+}
+button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #008CBA;
+}
+body{
+	color: white;	
+}
+div#loading {
+    width: 35px;
+    height: 35px;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    background: url(/static/loader.gif) no-repeat;
+    cursor: wait;
+}
+
+div#load {
+    display: none;
+    cursor: wait;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    function loading(){
+      $("#load").show();
+      $("#btnConvert").attr('disabled','disabled');  
+      $("#btnConv").click(); 
+    }
+</script>
+
+
+<br>
+<header><center style="background-color:#008CBA;">
+<h1>Welcome to File Converter Application</h1></center></header>
+
+<body style = "background-color: grey;">
+<br><br>
+<h1><b>Excel to PDF Conversion </b></h1>
+<p><h3>You need to follow few steps to perform the operation. </h3></p><br>
+
+<li>Select the file you want to Convert</li>
+<li>For that Hit on the Choose File button . </li>
+<li>It will aloow you to browse over your documents resides in local computer.</li>
+<li>Select one at a time.</li>
+<li>Click on Convert button.</li>
+<br>
+<form method="post" >
+<label><h3><u><b>Select a file :  </b></u></label>
+   &nbsp;&nbsp;  &nbsp;&nbsp; 
+<input type="file" id="myfile" name="myfile"></h3>
+<!--<input type=submit value=Upload></h4>-->
+
+<!-- <button type="submit" >Convert</button> -->
+<button type="submit" id="btnConvert" name="action" value="Conv" onclick="loading();" style="float:left">Convert</button><br/><div id="load"><div id="loading"></div>Converting File</div>
+<button type="submit" id="btnConv" name="action" value="Convert" style="visibility:hidden">Convert</button><br/>
+<div id="predict_content" class="content">
+    {{ predict_content }}
+</div><br>
+<button type="submit" name="action" value="Download">Download File</button>
+<br>
+<b>***If you wnats to extract some particular pages from that pdf , please click on the link below</b>
+<h2><b><u><a href="{{ url_for('pdf_extraction') }}"> PDF Extraction</a></u></b></h2>
+
+</form>
+</body>
+
+
